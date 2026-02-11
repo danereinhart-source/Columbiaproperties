@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding the Arizona Landlord-Tenant Act 2026 | Columbia Properties</title>
+    <meta name="description" content="Complete guide to Arizona's landlord-tenant laws for 2026. Learn about security deposits, evictions, lease requirements, and landlord responsibilities in Phoenix.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --accent-green: #4a7c59;
+        }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.8; color: var(--dark-gray); }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+        header {
+            background: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--black);
+            text-decoration: none;
+        }
+        nav { display: flex; align-items: center; gap: 30px; }
+        nav a { color: var(--dark-gray); text-decoration: none; font-size: 0.9rem; }
+        nav a:hover { color: var(--black); }
+        .phone-btn {
+            border: 1px solid var(--black);
+            padding: 10px 20px;
+            font-size: 0.85rem;
+        }
+
+        .blog-header {
+            padding: 60px 5%;
+            background: var(--light-gray);
+        }
+        .blog-header .breadcrumb {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        .blog-header .breadcrumb a { color: var(--gray); }
+        .blog-header h1 {
+            font-size: 2.8rem;
+            color: var(--black);
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        .blog-header .meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 5%;
+        }
+        .blog-content p {
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+        .blog-content h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            color: var(--black);
+        }
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--black);
+        }
+        .blog-content ul, .blog-content ol {
+            margin: 20px 0 20px 30px;
+            color: var(--dark-gray);
+        }
+        .blog-content li { margin-bottom: 10px; }
+        .blog-content strong { color: var(--black); }
+        .highlight-box {
+            background: var(--light-gray);
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid var(--dark-gray);
+        }
+
+        .cta-box {
+            background: var(--black);
+            color: var(--white);
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-box h3 { color: var(--white); margin-bottom: 15px; font-size: 1.5rem; }
+        .cta-box p { opacity: 0.9; margin-bottom: 20px; }
+        .cta-box a {
+            display: inline-block;
+            border: 1px solid var(--white);
+            padding: 12px 30px;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .cta-box a:hover { background: var(--white); color: var(--black); }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 50px 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-left h3 { font-size: 1.5rem; margin-bottom: 20px; }
+        .footer-left p { opacity: 0.7; font-size: 0.9rem; margin-bottom: 10px; }
+        .footer-left a { color: var(--accent-green); text-decoration: none; }
+        .footer-right { text-align: right; }
+        .footer-right p { margin-bottom: 10px; }
+        .footer-right a { color: var(--white); text-decoration: none; }
+
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; }
+            nav.active { display: flex; }
+            .blog-header h1 { font-size: 2rem; }
+            footer { flex-direction: column; gap: 30px; }
+            .footer-right { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">Columbia Properties</a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../management.html">Property Management</a>
+            <a href="../home-watching.html">Home Watching</a>
+            <a href="../pricing.html">Pricing</a>
+            <a href="../about.html">Who We Are</a>
+            <a href="../blog.html">Blog</a>
+            <a href="tel:6029355543" class="phone-btn">Call or Text 602-935-5543</a>
+        </nav>
+    </header>
+
+    <section class="blog-header">
+        <p class="breadcrumb"><a href="../blog.html">Blog</a> / Arizona Landlord-Tenant Act</p>
+        <h1>Understanding the Arizona Landlord-Tenant Act: What Property Owners Need to Know in 2026</h1>
+        <p class="meta">February 10, 2026 • 8 min read</p>
+    </section>
+
+    <article class="blog-content">
+        <p>Whether you're a first-time landlord in Phoenix or a seasoned real estate investor with properties across the Valley, understanding Arizona's landlord-tenant laws is essential for protecting your investment and maintaining positive tenant relationships. The Arizona Residential Landlord and Tenant Act (A.R.S. Title 33, Chapter 10) governs the rights and responsibilities of both parties in residential lease agreements.</p>
+
+        <p>In this comprehensive guide, we'll break down the key provisions of Arizona's landlord-tenant laws that every Phoenix property owner should know in 2026.</p>
+
+        <h2>Security Deposits in Arizona</h2>
+
+        <p>One of the most common areas of confusion for landlords involves security deposit regulations. Arizona law sets clear guidelines:</p>
+
+        <ul>
+            <li><strong>Maximum Amount:</strong> Arizona does not limit the amount you can charge for a security deposit. However, charging more than one and a half months' rent may make your property less competitive.</li>
+            <li><strong>Refund Timeline:</strong> You must return the security deposit within 14 days after the tenant moves out and returns the keys.</li>
+            <li><strong>Itemized Deductions:</strong> If you withhold any portion of the deposit, you must provide an itemized statement of deductions within the 14-day window.</li>
+            <li><strong>Allowable Deductions:</strong> You may deduct for unpaid rent, cleaning costs to return the unit to its original condition (beyond normal wear and tear), and damages caused by the tenant.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <strong>Pro Tip:</strong> Always conduct a thorough move-in inspection with your tenant and document the property's condition with dated photos. This protects you in any deposit dispute.
+        </div>
+
+        <h2>Lease Agreement Requirements</h2>
+
+        <p>While verbal rental agreements are technically legal in Arizona, written leases are strongly recommended. A comprehensive lease should include:</p>
+
+        <ul>
+            <li>Names of all tenants and landlord</li>
+            <li>Property address and description</li>
+            <li>Lease term (start and end dates)</li>
+            <li>Rent amount, due date, and acceptable payment methods</li>
+            <li>Security deposit amount and terms</li>
+            <li>Late fee policies</li>
+            <li>Maintenance responsibilities</li>
+            <li>Pet policies (if applicable)</li>
+            <li>Rules regarding noise, parking, and common areas</li>
+        </ul>
+
+        <h2>Landlord Responsibilities</h2>
+
+        <p>Arizona law requires landlords to maintain their rental properties in a habitable condition. This includes:</p>
+
+        <h3>Essential Services</h3>
+        <ul>
+            <li>Providing running water and reasonable amounts of hot water</li>
+            <li>Maintaining heating and cooling systems in working order</li>
+            <li>Providing electricity and plumbing in good condition</li>
+            <li>Ensuring the property is weatherproof and free from pests</li>
+        </ul>
+
+        <h3>Safety Requirements</h3>
+        <ul>
+            <li>Installing working smoke detectors</li>
+            <li>Providing proper locks on doors and windows</li>
+            <li>Maintaining common areas in safe condition</li>
+            <li>Addressing any conditions that materially affect health and safety</li>
+        </ul>
+
+        <h2>The Eviction Process in Arizona</h2>
+
+        <p>Arizona is considered a landlord-friendly state with relatively streamlined eviction procedures. However, you must follow the legal process carefully:</p>
+
+        <h3>For Non-Payment of Rent</h3>
+        <ol>
+            <li><strong>5-Day Notice:</strong> Serve a written notice giving the tenant 5 days to pay rent or vacate</li>
+            <li><strong>File for Eviction:</strong> If the tenant doesn't pay or leave, file a forcible detainer action in Justice Court</li>
+            <li><strong>Court Hearing:</strong> Typically scheduled within 3-6 days of filing</li>
+            <li><strong>Writ of Restitution:</strong> If you win, the court issues a writ allowing the constable to remove the tenant</li>
+        </ol>
+
+        <h3>For Lease Violations</h3>
+        <ul>
+            <li><strong>Material Health/Safety Violations:</strong> 5-day notice with no opportunity to cure for certain serious violations</li>
+            <li><strong>Other Violations:</strong> 10-day notice giving tenant opportunity to remedy the violation</li>
+        </ul>
+
+        <div class="highlight-box">
+            <strong>Important:</strong> Never attempt "self-help" evictions such as changing locks, removing doors, or shutting off utilities. These actions are illegal and can result in significant liability.
+        </div>
+
+        <h2>Tenant Rights You Must Respect</h2>
+
+        <p>To avoid legal issues, landlords should be aware of tenant rights under Arizona law:</p>
+
+        <ul>
+            <li><strong>Right to Privacy:</strong> You must provide at least 2 days' notice before entering the property, except in emergencies</li>
+            <li><strong>Right to Habitable Conditions:</strong> Tenants can request repairs and, in certain circumstances, withhold rent or make repairs themselves</li>
+            <li><strong>Protection from Retaliation:</strong> You cannot raise rent, decrease services, or threaten eviction in response to a tenant exercising their legal rights</li>
+            <li><strong>Fair Housing Protections:</strong> You cannot discriminate based on race, color, religion, sex, familial status, national origin, or disability</li>
+        </ul>
+
+        <h2>Recent Updates for 2026</h2>
+
+        <p>Several legislative changes have impacted Arizona landlord-tenant law in recent years. Stay current on:</p>
+
+        <ul>
+            <li>Updated fair housing regulations</li>
+            <li>Changes to late fee limitations in certain municipalities</li>
+            <li>New disclosure requirements for certain property conditions</li>
+            <li>Updated procedures for abandoned property</li>
+        </ul>
+
+        <h2>How Professional Property Management Helps</h2>
+
+        <p>Navigating Arizona's landlord-tenant laws can be complex, especially with ongoing legislative changes. Professional property management companies like Columbia Properties stay current on all legal requirements and handle:</p>
+
+        <ul>
+            <li>Legally compliant lease preparation</li>
+            <li>Proper security deposit handling</li>
+            <li>Required disclosures and notices</li>
+            <li>Fair housing compliance</li>
+            <li>Eviction procedures when necessary</li>
+        </ul>
+
+        <div class="cta-box">
+            <h3>Need Help Managing Your Phoenix Rental Property?</h3>
+            <p>Let Columbia Properties handle the legal complexities while you enjoy consistent rental income.</p>
+            <a href="../index.html#contact">Get a Free Rental Analysis</a>
+        </div>
+
+        <p>Understanding Arizona's landlord-tenant laws is crucial for successful property ownership. By staying informed and working with experienced professionals, you can protect your investment while maintaining positive tenant relationships.</p>
+
+        <p><em>Disclaimer: This article provides general information and should not be considered legal advice. For specific legal questions, consult with a qualified Arizona real estate attorney.</em></p>
+    </article>
+
+    <footer>
+        <div class="footer-left">
+            <h3>Columbia Properties</h3>
+            <p>ADRE #LC717111000</p>
+            <p><a href="../privacy.html">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>602-935-5543</p>
+            <p><a href="mailto:info@columbia-properties.com">info@columbia-properties.com</a></p>
+            <p>2942 N 24th St #115, Phoenix, AZ 85016</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Management Pricing | Columbia Properties</title>
+    <meta name="description" content="Transparent property management pricing in Phoenix. Lowest fees in the Valley with our Price Match Guarantee. Platinum and Diamond tiers available.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --accent-green: #4a7c59;
+        }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.7; color: var(--dark-gray); }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--black);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        nav { display: flex; align-items: center; gap: 30px; }
+        nav a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav a.active { color: var(--black); text-decoration: underline; text-underline-offset: 5px; }
+        .phone-btn {
+            border: 1px solid var(--black);
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .phone-btn:hover { background: var(--black); color: var(--white); }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('download.jpg.webp') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            background: rgba(0,0,0,0.8);
+            padding: 50px 60px;
+            text-align: center;
+            color: var(--white);
+            max-width: 700px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        .hero .tagline {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .hero p { opacity: 0.9; }
+        .hero .highlight {
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        /* Price Match Section */
+        .price-match {
+            background: var(--light-gray);
+            padding: 60px 5%;
+        }
+        .price-match-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .price-match h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+        .price-match p {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+        .price-match strong {
+            color: var(--dark-gray);
+        }
+
+        /* Pricing Tiers */
+        .pricing-section {
+            padding: 80px 5%;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .pricing-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        .pricing-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .pricing-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--black);
+        }
+        .pricing-info .fee {
+            margin-bottom: 15px;
+        }
+        .pricing-info .fee-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        .pricing-info .fee-value {
+            color: var(--black);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Service Areas */
+        .service-areas {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('GettyImages-1384896175.jpg') center/cover no-repeat;
+            padding: 80px 5%;
+            color: var(--white);
+        }
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .area-column {
+            background: rgba(0,0,0,0.7);
+            padding: 30px;
+        }
+        .area-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+        .area-column ul { list-style: none; }
+        .area-column li { padding: 8px 0; font-style: italic; }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 5%;
+            text-align: center;
+        }
+        .cta-btn {
+            display: inline-block;
+            border: 1px solid var(--black);
+            padding: 18px 40px;
+            text-decoration: none;
+            color: var(--black);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        .cta-btn:hover { background: var(--black); color: var(--white); }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 50px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .footer-left h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .footer-left p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-left a { color: var(--accent-green); text-decoration: none; }
+        .footer-right { text-align: right; }
+        .footer-right p { margin-bottom: 10px; font-size: 0.95rem; }
+        .footer-right a { color: var(--white); text-decoration: none; }
+
+        /* Mobile */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 968px) {
+            .mobile-menu-btn { display: block; }
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            }
+            nav.active { display: flex; }
+            .hero { height: auto; min-height: 50vh; }
+            .hero-content { margin: 5%; padding: 30px; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .pricing-card { grid-template-columns: 1fr; }
+            .areas-grid { grid-template-columns: 1fr; }
+            footer { flex-direction: column; gap: 30px; }
+            .footer-right { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Columbia Properties</a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="management.html">Property Management</a>
+            <a href="home-watching.html">Home Watching</a>
+            <a href="pricing.html" class="active">Pricing</a>
+            <a href="about.html">Who We Are</a>
+            <a href="mailto:info@columbia-properties.com">Email</a>
+            <a href="blog.html">Blog</a>
+            <a href="tel:6029355543" class="phone-btn">Call or Text 602-935-5543</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Property Management Pricing</h1>
+            <p class="tagline">Straight-forward, honest, and all-encompassing service.</p>
+            <p>Whether you have one unit or one hundred, we are focused on maximizing your investment property and its bottom line. Our compensation is based on minimizing vacancies and maximizing revenue.</p>
+            <p class="highlight"><strong>We optimize, you win.<br>You win, we win.</strong></p>
+        </div>
+    </section>
+
+    <section class="price-match">
+        <div class="price-match-content">
+            <h2>Columbia Price Match Guarantee</h2>
+            <p>Columbia Properties is on a mission to provide optimal service for our clients at an unbeatable price point. If you are in an existing contract with a property manager, we will guarantee to not only match their price, but <strong>beat their monthly management fee by 1% of revenue</strong> upon signing with Columbia.</p>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <img src="download+(1).jpg.webp" alt="Luxury home">
+                <div class="pricing-info">
+                    <h3>Platinum (1-4 units)</h3>
+                    <div class="fee">
+                        <p class="fee-label">Monthly Management Fee:</p>
+                        <p class="fee-value">8% of Monthly Rental Income</p>
+                    </div>
+                    <div class="fee">
+                        <p class="fee-label">Tenant Placement Fee:</p>
+                        <p class="fee-value">50% of First Month's Rent</p>
+                    </div>
+                    <div class="fee">
+                        <p class="fee-label">Lease Renewal Fee:</p>
+                        <p class="fee-value">$199</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-card">
+                <img src="Choosing.jpg.webp" alt="Multi-family property">
+                <div class="pricing-info">
+                    <h3>Diamond (5+ units)</h3>
+                    <div class="fee">
+                        <p class="fee-label">Monthly Management Fee:</p>
+                        <p class="fee-value">5% of Monthly Rental Income</p>
+                    </div>
+                    <div class="fee">
+                        <p class="fee-label">Tenant Placement Fee:</p>
+                        <p class="fee-value">25% of First Month's Rent</p>
+                    </div>
+                    <div class="fee">
+                        <p class="fee-label">Lease Renewal Fee:</p>
+                        <p class="fee-value">$99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-areas">
+        <div class="areas-grid">
+            <div class="area-column">
+                <h4>West Valley</h4>
+                <ul>
+                    <li>Peoria</li>
+                    <li>Glendale</li>
+                    <li>Surprise</li>
+                    <li>Goodyear</li>
+                    <li>Avondale</li>
+                    <li>Sun City</li>
+                </ul>
+            </div>
+            <div class="area-column">
+                <h4>Central/North Valley</h4>
+                <ul>
+                    <li>Phoenix</li>
+                    <li>Ahwatukee</li>
+                    <li>Laveen</li>
+                    <li>Cave Creek</li>
+                    <li>Carefree</li>
+                    <li>Anthem</li>
+                </ul>
+            </div>
+            <div class="area-column">
+                <h4>East Valley</h4>
+                <ul>
+                    <li>Scottsdale</li>
+                    <li>Tempe</li>
+                    <li>Mesa</li>
+                    <li>Gilbert</li>
+                    <li>Chandler</li>
+                    <li>Queen Creek</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <a href="index.html#contact" class="cta-btn">GET YOUR FREE RENTAL ANALYSIS</a>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            <h3>Columbia Properties</h3>
+            <p>ADRE #LC717111000</p>
+            <p><a href="privacy.html">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>602-935-5543</p>
+            <p><a href="mailto:info@columbia-properties.com">info@columbia-properties.com</a></p>
+            <p>2942 N 24th St #115, Phoenix, AZ 85016</p>
+        </div>
+    </footer>
+</body>
+</html>

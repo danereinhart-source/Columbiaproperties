@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Watching Services | Columbia Properties</title>
+    <meta name="description" content="Professional home watching services in Phoenix. Keep your property safe while you travel with regular checks by certified home-watching professionals.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --accent-green: #4a7c59;
+        }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.7; color: var(--dark-gray); }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--black);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        nav { display: flex; align-items: center; gap: 30px; }
+        nav a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav a.active { color: var(--black); text-decoration: underline; text-underline-offset: 5px; }
+        .phone-btn {
+            border: 1px solid var(--black);
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .phone-btn:hover { background: var(--black); color: var(--white); }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('image_163603938.jpeg.webp') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+        }
+        .hero-content {
+            background: rgba(255,255,255,0.95);
+            padding: 50px;
+            max-width: 550px;
+            margin-left: 5%;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+        .hero .tagline {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+        .hero p { color: var(--gray); font-size: 0.95rem; }
+
+        /* Main Content */
+        .content-section {
+            padding: 80px 5%;
+        }
+        .content-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--black);
+            background: var(--light-gray);
+            padding: 20px 30px;
+            display: inline-block;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 40px;
+        }
+        .content-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+        .content-text p {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .content-text ul {
+            color: var(--gray);
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .content-text li {
+            margin-bottom: 10px;
+        }
+        .content-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Services List */
+        .services-list {
+            background: var(--light-gray);
+            padding: 60px 5%;
+        }
+        .services-list h2 {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            text-align: center;
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--dark-gray);
+            margin-bottom: 20px;
+        }
+        .service-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 5%;
+            text-align: center;
+            background: var(--white);
+        }
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .cta-btn {
+            display: inline-block;
+            border: 1px solid var(--black);
+            padding: 18px 40px;
+            text-decoration: none;
+            color: var(--black);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        .cta-btn:hover { background: var(--black); color: var(--white); }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 50px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .footer-left h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .footer-left p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-left a { color: var(--accent-green); text-decoration: none; }
+        .footer-right { text-align: right; }
+        .footer-right p { margin-bottom: 10px; font-size: 0.95rem; }
+        .footer-right a { color: var(--white); text-decoration: none; }
+
+        /* Mobile */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 968px) {
+            .mobile-menu-btn { display: block; }
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            }
+            nav.active { display: flex; }
+            .hero { height: auto; min-height: 60vh; }
+            .hero-content { margin: 5%; max-width: none; }
+            .content-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            footer { flex-direction: column; gap: 30px; }
+            .footer-right { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Columbia Properties</a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="management.html">Property Management</a>
+            <a href="home-watching.html" class="active">Home Watching</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">Who We Are</a>
+            <a href="mailto:info@columbia-properties.com">Email</a>
+            <a href="blog.html">Blog</a>
+            <a href="tel:6029355543" class="phone-btn">Call or Text 602-935-5543</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Columbia Home Watching</h1>
+            <p class="tagline">Your home's trusted guardian in Arizona.</p>
+            <p>Our mission is to offer you peace of mind, providing regular and reliable checks by certified home-watching professionals to ensure your home is safeguarded and well-maintained.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Travel Worry-Free: Columbia Safeguards Your Haven</h2>
+        <div class="content-grid">
+            <div class="content-text">
+                <h3>Professional Home Watch Services</h3>
+                <p>Whether you're a snowbird escaping the Arizona summer, a frequent traveler, or simply away for an extended period, your home deserves professional attention in your absence.</p>
+                <p>Our certified home-watching professionals conduct regular inspections to identify and address potential issues before they become costly problems:</p>
+                <ul>
+                    <li>Water leaks and plumbing issues</li>
+                    <li>HVAC system malfunctions</li>
+                    <li>Pest infestations</li>
+                    <li>Security concerns</li>
+                    <li>Storm damage</li>
+                    <li>General maintenance needs</li>
+                </ul>
+                <p>After each visit, you'll receive a detailed report with photos, so you always know the status of your property.</p>
+            </div>
+            <div class="content-image">
+                <img src="image_163603968.jpeg.webp" alt="Arizona backyard with pool">
+            </div>
+        </div>
+    </section>
+
+    <section class="services-list">
+        <h2>What We Check During Each Visit</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-tint"></i>
+                <h4>Plumbing & Water</h4>
+                <p>Check for leaks, run faucets, flush toilets, inspect water heater</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-thermometer-half"></i>
+                <h4>HVAC Systems</h4>
+                <p>Verify AC/heating operation, check thermostat settings, replace filters</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-lock"></i>
+                <h4>Security Check</h4>
+                <p>Inspect doors, windows, garage, and alarm systems</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-lightbulb"></i>
+                <h4>Electrical Systems</h4>
+                <p>Test lights, check breaker panel, verify smoke detectors</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-swimming-pool"></i>
+                <h4>Pool & Spa</h4>
+                <p>Monitor water levels, check equipment, coordinate with pool service</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-bug"></i>
+                <h4>Pest Inspection</h4>
+                <p>Look for signs of pests, coordinate with exterminators if needed</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Protect Your Home?</h2>
+        <p>Contact us today to learn more about our home watching services and pricing. We'll customize a plan that fits your needs and gives you peace of mind.</p>
+        <a href="index.html#contact" class="cta-btn">GET A FREE CONSULTATION</a>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            <h3>Columbia Properties</h3>
+            <p>ADRE #LC717111000</p>
+            <p><a href="privacy.html">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>602-935-5543</p>
+            <p><a href="mailto:info@columbia-properties.com">info@columbia-properties.com</a></p>
+            <p>2942 N 24th St #115, Phoenix, AZ 85016</p>
+        </div>
+    </footer>
+</body>
+</html>

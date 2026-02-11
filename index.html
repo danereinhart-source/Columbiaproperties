@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columbia Properties | Phoenix Property Management</title>
+    <meta name="description" content="Columbia Properties offers professional property management services in the Phoenix metro area. Maximize your cash flow with our expert team.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --accent-green: #4a7c59;
+        }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.7; color: var(--dark-gray); }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--black);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        nav { display: flex; align-items: center; gap: 30px; }
+        nav a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--black); }
+        .phone-btn {
+            border: 1px solid var(--black);
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .phone-btn:hover { background: var(--black); color: var(--white); }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('cL33NZm.jpg.webp') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .hero-content {
+            background: rgba(255,255,255,0.95);
+            padding: 50px;
+            max-width: 550px;
+            margin-left: 5%;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+        .hero .tagline {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+        .hero p { color: var(--gray); margin-bottom: 0; font-size: 0.95rem; }
+        .cta-btn-hero {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.8);
+            color: var(--white);
+            padding: 20px 30px;
+            text-decoration: none;
+            font-size: 1rem;
+            border: none;
+            transition: background 0.3s;
+        }
+        .cta-btn-hero:hover { background: var(--black); }
+
+        /* What We Do Section */
+        .what-we-do {
+            padding: 80px 5%;
+            background: var(--light-gray);
+        }
+        .what-we-do h2 {
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+        .what-we-do .statements p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+        .what-we-do .description {
+            margin-top: 30px;
+            color: var(--gray);
+        }
+
+        /* Two Column Section */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 80px 5%;
+        }
+        .two-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--black);
+        }
+        .two-column p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+        .two-column ol {
+            color: var(--gray);
+            margin-left: 20px;
+        }
+        .two-column ol li {
+            margin-bottom: 20px;
+        }
+        .two-column ol li strong {
+            color: var(--dark-gray);
+        }
+
+        /* CTA Button */
+        .cta-btn {
+            display: inline-block;
+            border: 1px solid var(--black);
+            padding: 15px 30px;
+            margin-top: 30px;
+            text-decoration: none;
+            color: var(--black);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        .cta-btn:hover { background: var(--black); color: var(--white); }
+
+        /* Service Areas */
+        .service-areas {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('GettyImages-1384896175.jpg') center/cover no-repeat;
+            padding: 80px 5%;
+            color: var(--white);
+        }
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .area-column {
+            background: rgba(0,0,0,0.7);
+            padding: 30px;
+        }
+        .area-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+        .area-column ul {
+            list-style: none;
+        }
+        .area-column li {
+            padding: 8px 0;
+            font-style: italic;
+        }
+
+        /* Association Logos */
+        .associations {
+            padding: 60px 5%;
+            background: var(--white);
+        }
+        .logos-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+        .logos-grid img {
+            height: 70px;
+            object-fit: contain;
+            filter: grayscale(0%);
+        }
+
+        /* Testimonial Section */
+        .testimonial {
+            background: linear-gradient(rgba(245,240,235,0.9), rgba(245,240,235,0.9)), url('desktop-1024x576.jpg.webp') center/cover no-repeat;
+            padding: 100px 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .testimonial-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-style: italic;
+            line-height: 1.5;
+            color: var(--black);
+        }
+        .testimonial-info {
+            background: rgba(50,50,50,0.9);
+            color: var(--white);
+            padding: 40px;
+        }
+        .testimonial-info h4 {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        .testimonial-info p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .contact-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .contact-form h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--black);
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+        .form-group label span {
+            color: var(--gray);
+            font-size: 0.8rem;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            font-family: inherit;
+            font-size: 1rem;
+            background: var(--light-gray);
+        }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--black);
+        }
+        .submit-btn {
+            border: 1px solid var(--black);
+            background: var(--white);
+            padding: 15px 40px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 50px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .footer-left h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .footer-left p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .footer-left a {
+            color: var(--accent-green);
+            text-decoration: none;
+        }
+        .footer-left a:hover { text-decoration: underline; }
+        .footer-right {
+            text-align: right;
+        }
+        .footer-right p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        .footer-right a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .mobile-menu-btn { display: block; }
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            }
+            nav.active { display: flex; }
+            .hero { height: auto; min-height: 80vh; }
+            .hero-content { margin: 5%; max-width: none; }
+            .hero h1 { font-size: 2.2rem; }
+            .cta-btn-hero {
+                position: static;
+                transform: none;
+                margin-top: 30px;
+                display: block;
+                text-align: center;
+            }
+            .two-column { grid-template-columns: 1fr; gap: 40px; }
+            .areas-grid { grid-template-columns: 1fr; }
+            .testimonial { grid-template-columns: 1fr; }
+            .contact { grid-template-columns: 1fr; }
+            footer { flex-direction: column; gap: 30px; }
+            .footer-right { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Columbia Properties</a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="management.html">Property Management</a>
+            <a href="home-watching.html">Home Watching</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">Who We Are</a>
+            <a href="mailto:info@columbia-properties.com">Email</a>
+            <a href="blog.html">Blog</a>
+            <a href="tel:6029355543" class="phone-btn">Call or Text 602-935-5543</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Columbia Property Management</h1>
+            <p class="tagline">Your property, our priority.</p>
+            <p>At Columbia Properties, we specialize in property management services to help property owners maximize their cash flow by optimizing their real estate investment. Our team handles a wide range of tasks, including tenant acquisition, lease enforcement, maintenance coordination, and financial reporting. With our expertise and dedication, we strive to provide a seamless experience for both property owners and tenants.</p>
+        </div>
+        <a href="#contact" class="cta-btn-hero">Get a Free Rental Analysis</a>
+    </section>
+
+    <section class="what-we-do">
+        <h2>WHAT WE DO</h2>
+        <div class="statements">
+            <p>We manage your investment.</p>
+            <p>We increase your cash flow.</p>
+            <p>You win.</p>
+        </div>
+        <p class="description">Your success is our success, and we are dedicated to helping you achieve your financial goals through capable and attentive property management.</p>
+    </section>
+
+    <section class="two-column">
+        <div class="mission">
+            <h3>Our Mission</h3>
+            <p>At Columbia Properties, our mission is to provide exceptional property management services that meet the unique needs of our clients. We are committed to maintaining the highest standards of professionalism, integrity, and transparency in all aspects of our operations. Our goal is to enhance the value of the properties we manage, while also ensuring the satisfaction of both property owners and tenants. We strive to create a positive and supportive living and working environment for all stakeholders, fostering strong relationships built on trust and reliability. With a focus on efficiency and attention to detail, we aim to exceed expectations and deliver outstanding results for every property under our care.</p>
+
+            <h3 style="margin-top: 40px;">Our Vision</h3>
+            <p>At Columbia Properties, our vision as a property management company is grounded in a commitment to excellence and client satisfaction. We strive to provide exceptional services that exceed our clients' expectations while maintaining transparency and integrity in all our interactions. Our goal is to be a trusted partner for property owners, offering tailored solutions to meet their unique needs and maximize the value of their investments. By leveraging innovation and technology, we aim to streamline processes, enhance efficiency, and deliver the highest standard of property management services.</p>
+
+            <a href="#contact" class="cta-btn">GET YOUR FREE RENTAL ANALYSIS</a>
+        </div>
+        <div class="rental-analysis">
+            <h3>Columbia's Signature Rental Analysis</h3>
+            <p>Clients interested in our property management services will receive a comprehensive market analysis to help them make informed decisions about their real estate investments. This analysis will encompass various key components to provide a clear picture of the market trends impacting their properties.</p>
+            <ol>
+                <li><strong>Rental Market Analysis:</strong> We will conduct a thorough assessment of rental trends in the area where the client's property is located. This will include analyzing current rental rates, vacancy rates, and demand-supply dynamics to determine the optimal rental price for the property.</li>
+                <li><strong>Property Valuation Analysis:</strong> Our team will evaluate the current market value of the client's property by considering recent sales data, property condition, location factors, and other relevant variables. This valuation will help clients understand the potential return on investment and market positioning of their property.</li>
+                <li><strong>Competitive Analysis:</strong> We will research and analyze competing properties in the vicinity to benchmark the client's property against similar offerings. This comparison will highlight the property's unique selling points and competitive advantages in the market.</li>
+                <li><strong>Trend Analysis:</strong> Clients will receive insights into market trends such as demographic shifts, economic indicators, and legislative changes that may impact the performance of their property. Staying updated on these trends is crucial for making strategic decisions in property management.</li>
+                <li><strong>Recommendations and Strategies:</strong> Based on the market analysis findings, clients will be presented with tailored recommendations and strategies to optimize their property's performance. These can include pricing adjustments, property enhancements, marketing tactics, and tenant retention strategies.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="service-areas">
+        <div class="areas-grid">
+            <div class="area-column">
+                <h4>West Valley</h4>
+                <ul>
+                    <li>Peoria</li>
+                    <li>Glendale</li>
+                    <li>Surprise</li>
+                    <li>Goodyear</li>
+                    <li>Avondale</li>
+                    <li>Sun City</li>
+                </ul>
+            </div>
+            <div class="area-column">
+                <h4>Central/North Valley</h4>
+                <ul>
+                    <li>Phoenix</li>
+                    <li>Ahwatukee</li>
+                    <li>Laveen</li>
+                    <li>Cave Creek</li>
+                    <li>Carefree</li>
+                    <li>Anthem</li>
+                </ul>
+            </div>
+            <div class="area-column">
+                <h4>East Valley</h4>
+                <ul>
+                    <li>Scottsdale</li>
+                    <li>Tempe</li>
+                    <li>Mesa</li>
+                    <li>Gilbert</li>
+                    <li>Chandler</li>
+                    <li>Queen Creek</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="associations">
+        <div class="logos-grid">
+            <img src="NARPM-Logo-transparent-min-1.png" alt="NARPM - National Association of Residential Property Managers">
+            <img src="arizona realtors logo.png" alt="Arizona Realtors">
+            <img src="NHWA logo.png" alt="National Home Watch Association">
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="testimonial-quote">
+            "Columbia Properties is professional, responsive, and always goes above and beyond to ensure everything runs smoothly"
+        </div>
+        <div class="testimonial-info">
+            <h4>Modern techniques, institutional knowledge, decades of experience.</h4>
+            <p>At Columbia Properties, our property management team boasts a wealth of experience in the real estate industry. With our institutional background shaping our approach, our team members have a deep understanding of the complexities involved in managing various types of properties efficiently and effectively. Their combined expertise allows them to navigate challenges with ease while maximizing the value of the properties under our care. Whether it's overseeing day-to-day operations, handling tenant relations, or implementing strategic improvements, our seasoned team is dedicated to providing top-notch service tailored to meet the unique needs of each property we manage.</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-image">
+            <img src="image-asset.jpeg-3.webp" alt="Arizona Property">
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/mgolonoe" method="POST">
+                <div class="form-group">
+                    <label>Name</label>
+                    <div class="form-row">
+                        <div>
+                            <input type="text" name="first_name" required>
+                            <label><span>First Name (required)</span></label>
+                        </div>
+                        <div>
+                            <input type="text" name="last_name" required>
+                            <label><span>Last Name (required)</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email <span>(required)</span></label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" name="phone">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            <h3>Columbia Properties</h3>
+            <p>ADRE #LC717111000</p>
+            <p><a href="privacy.html">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>602-935-5543</p>
+            <p><a href="mailto:info@columbia-properties.com">info@columbia-properties.com</a></p>
+            <p>2942 N 24th St #115, Phoenix, AZ 85016</p>
+        </div>
+    </footer>
+</body>
+</html>
