@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property Management Services | Columbia Properties</title>
     <meta name="description" content="Professional property management services in Phoenix. Marketing, tenant screening, rent collection, maintenance, and compliance - all handled by Columbia Properties.">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -15,10 +15,10 @@
             --gray: #666666;
             --light-gray: #f5f5f5;
             --dark-gray: #333333;
-            --accent-green: #4a7c59;
+            --accent-green: #5fbdac;
         }
         body { font-family: 'Open Sans', sans-serif; line-height: 1.7; color: var(--dark-gray); }
-        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 700; }
 
         /* Header */
         header {
@@ -34,8 +34,8 @@
         }
         .logo {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            font-weight: 400;
+            font-size: 2.2rem;
+            font-weight: 700;
             color: var(--black);
             text-decoration: none;
             letter-spacing: 1px;
@@ -44,15 +44,16 @@
         nav a {
             color: var(--dark-gray);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            font-weight: 500;
             transition: color 0.3s;
         }
         nav a:hover, nav a.active { color: var(--black); text-decoration: underline; text-underline-offset: 5px; }
         .phone-btn {
             border: 1px solid var(--black);
-            padding: 10px 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            padding: 12px 22px;
+            font-size: 0.9rem;
+            font-weight: 600;
         }
         .phone-btn:hover { background: var(--black); color: var(--white); }
 
@@ -65,134 +66,140 @@
             position: relative;
         }
         .hero-content {
-            background: rgba(255,255,255,0.95);
-            padding: 50px;
-            max-width: 550px;
+            background: rgba(0,0,0,0.85);
+            padding: 50px 55px;
+            max-width: 600px;
             margin-left: 5%;
+            color: var(--white);
         }
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             line-height: 1.2;
             margin-bottom: 20px;
-            color: var(--black);
+            color: var(--white);
         }
-        .hero p { color: var(--gray); font-size: 0.95rem; }
+        .hero p { color: rgba(255,255,255,0.9); font-size: 1rem; line-height: 1.8; }
         .hero-highlights {
             position: absolute;
             right: 5%;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(200,230,220,0.95);
-            padding: 30px;
+            background: rgba(0,0,0,0.85);
+            padding: 35px;
         }
         .hero-highlights ul {
             list-style: none;
             font-style: italic;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
         .hero-highlights li {
-            padding: 8px 0;
-            color: var(--dark-gray);
+            padding: 10px 0;
+            color: var(--white);
         }
         .hero-highlights li::before {
             content: "• ";
-            color: var(--dark-gray);
+            color: var(--accent-green);
         }
 
         /* Services Section */
         .services-intro {
             background: var(--light-gray);
-            padding: 60px 5%;
+            padding: 50px 5%;
             text-align: center;
         }
         .services-intro h2 {
-            font-size: 2rem;
+            font-size: 2.4rem;
             margin-bottom: 10px;
+            color: var(--black);
         }
 
         .services-grid {
-            padding: 60px 5%;
+            padding: 50px 5%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
+            gap: 40px;
         }
         .service-item h3 {
             font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
+            font-size: 1.15rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: var(--black);
         }
         .service-item p {
-            color: var(--gray);
-            font-size: 0.95rem;
+            color: var(--dark-gray);
+            font-size: 1rem;
             line-height: 1.8;
         }
 
         /* CTA Section */
         .cta-section {
-            padding: 60px 5%;
+            padding: 50px 5%;
             text-align: center;
         }
         .cta-btn {
             display: inline-block;
-            border: 1px solid var(--black);
-            padding: 18px 40px;
+            background: rgba(0,0,0,0.9);
+            border: none;
+            padding: 22px 45px;
             text-decoration: none;
-            color: var(--black);
-            font-size: 0.9rem;
+            color: var(--accent-green);
+            font-size: 1.1rem;
+            font-weight: 700;
             letter-spacing: 1px;
             transition: all 0.3s;
         }
-        .cta-btn:hover { background: var(--black); color: var(--white); }
+        .cta-btn:hover { background: var(--black); }
 
         /* Service Areas */
         .service-areas {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('GettyImages-1384896175.jpg') center/cover no-repeat;
-            padding: 80px 5%;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('GettyImages-1384896175.jpg') center/cover no-repeat;
+            padding: 60px 5%;
             color: var(--white);
         }
         .areas-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            gap: 30px;
             max-width: 1000px;
             margin: 0 auto;
         }
         .area-column {
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.8);
             padding: 30px;
         }
         .area-column h4 {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            font-weight: 700;
             margin-bottom: 20px;
             text-decoration: underline;
             text-underline-offset: 5px;
         }
         .area-column ul { list-style: none; }
-        .area-column li { padding: 8px 0; font-style: italic; }
+        .area-column li { padding: 8px 0; font-size: 1.05rem; font-weight: 500; }
 
         /* Footer */
         footer {
             background: var(--black);
             color: var(--white);
-            padding: 50px 5%;
+            padding: 40px 5%;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
         }
         .footer-left h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
         }
         .footer-left p {
-            opacity: 0.7;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
+            opacity: 0.8;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
         }
         .footer-left a { color: var(--accent-green); text-decoration: none; }
         .footer-right { text-align: right; }
-        .footer-right p { margin-bottom: 10px; font-size: 0.95rem; }
+        .footer-right p { margin-bottom: 8px; font-size: 1rem; }
         .footer-right a { color: var(--white); text-decoration: none; }
 
         /* Mobile */
@@ -218,7 +225,7 @@
                 box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             }
             nav.active { display: flex; }
-            .hero { height: auto; min-height: 60vh; }
+            .hero { height: auto; min-height: 60vh; flex-direction: column; padding: 30px 0; }
             .hero-content { margin: 5%; max-width: none; }
             .hero-highlights { position: static; transform: none; margin: 20px 5%; }
             .services-grid { grid-template-columns: 1fr; }
@@ -242,7 +249,7 @@
             <a href="about.html">Who We Are</a>
             <a href="mailto:info@columbia-properties.com">Email</a>
             <a href="blog.html">Blog</a>
-            <a href="tel:6029355543" class="phone-btn">Call or Text 602-935-5543</a>
+            <a href="tel:6029355543" class="phone-btn">602-935-5543</a>
         </nav>
     </header>
 
@@ -253,7 +260,7 @@
         </div>
         <div class="hero-highlights">
             <ul>
-                <li>Lighting-Quick Responses</li>
+                <li>Lightning-Quick Responses</li>
                 <li>Worry-Free Management</li>
                 <li>Decades of Experience</li>
                 <li>Lowest Fees in the Valley</li>
@@ -262,7 +269,7 @@
     </section>
 
     <section class="services-intro">
-        <h2>What we offer as the #1 Property Management Company in Arizona</h2>
+        <h2>What We Offer as the #1 Property Management Company in Arizona</h2>
     </section>
 
     <section class="services-grid">
@@ -280,7 +287,7 @@
         </div>
         <div class="service-item">
             <h3>Accounting & Financial Reporting</h3>
-            <p>With our meticulous financial oversight, we ensure your investment operates efficiently, so each line item, from application fees to rent payments to vendor invoices, is accounted for and optimized to maximize your net income. We handle every aspect of your property's cash inflows and outflows, including payment processing, vendor management, and detailed expense tracking and categorization. We provide you with regularly generated financial reports, providing clear and concise overviews of your property's financial health, allowing you to stay on top of the numbers and make informed decisions about your investment strategy.</p>
+            <p>With our meticulous financial oversight, we ensure your investment operates efficiently, so each line item, from application fees to rent payments to vendor invoices, is accounted for and optimized to maximize your net income. We handle every aspect of your property's cash inflows and outflows, including payment processing, vendor management, and detailed expense tracking and categorization. We provide you with regularly generated financial reports, providing clear and concise overviews of your property's financial health.</p>
         </div>
         <div class="service-item">
             <h3>Maintenance & Work Orders</h3>
@@ -288,7 +295,7 @@
         </div>
         <div class="service-item">
             <h3>Fair Housing & Property Law Compliance</h3>
-            <p>Don't let fair housing or property law uncertainties expose your investment to risk. Our property management services prioritize minimizing your liability by ensuring strict adherence to relevant regulations. Our team stays current on fair housing laws and state property management regulations, safeguarding your investment from legal issues. We implement transparent and compliant practices throughout the leasing process, including tenant screening, lease agreements, and property management procedures.</p>
+            <p>Don't let fair housing or property law uncertainties expose your investment to risk. Our property management services prioritize minimizing your liability by ensuring strict adherence to relevant regulations. Our team stays current on fair housing laws and state property management regulations, safeguarding your investment from legal issues. We implement transparent and compliant practices throughout the leasing process.</p>
         </div>
     </section>
 
