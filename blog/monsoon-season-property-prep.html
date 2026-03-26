@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsoon Season Property Preparation | Phoenix Landlord Checklist | Columbia Properties</title>
+    <meta name="description" content="Comprehensive monsoon preparation guide for Phoenix rental properties. Protect your investment with our landlord checklist for Arizona's intense storms.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --accent-green: #4a7c59;
+        }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.8; color: var(--dark-gray); }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+        header {
+            background: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--black);
+            text-decoration: none;
+        }
+        nav { display: flex; align-items: center; gap: 30px; }
+        nav a { color: var(--dark-gray); text-decoration: none; font-size: 0.9rem; }
+        nav a:hover { color: var(--black); }
+        .phone-btn {
+            border: 1px solid var(--black);
+            padding: 10px 20px;
+            font-size: 0.85rem;
+        }
+
+        .blog-header {
+            padding: 60px 5%;
+            background: var(--light-gray);
+        }
+        .blog-header .breadcrumb {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        .blog-header .breadcrumb a { color: var(--gray); }
+        .blog-header h1 {
+            font-size: 2.8rem;
+            color: var(--black);
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        .blog-header .meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 5%;
+        }
+        .blog-content p {
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+        .blog-content h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            color: var(--black);
+        }
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--black);
+        }
+        .blog-content ul, .blog-content ol {
+            margin: 20px 0 20px 30px;
+            color: var(--dark-gray);
+        }
+        .blog-content li { margin-bottom: 10px; }
+        .blog-content strong { color: var(--black); }
+        .highlight-box {
+            background: var(--light-gray);
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid var(--dark-gray);
+        }
+
+        .cta-box {
+            background: var(--black);
+            color: var(--white);
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-box h3 { color: var(--white); margin-bottom: 15px; font-size: 1.5rem; }
+        .cta-box p { opacity: 0.9; margin-bottom: 20px; }
+        .cta-box a {
+            display: inline-block;
+            border: 1px solid var(--white);
+            padding: 12px 30px;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .cta-box a:hover { background: var(--white); color: var(--black); }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 50px 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-left h3 { font-size: 1.5rem; margin-bottom: 20px; }
+        .footer-left p { opacity: 0.7; font-size: 0.9rem; margin-bottom: 10px; }
+        .footer-left a { color: var(--accent-green); text-decoration: none; }
+        .footer-right { text-align: right; }
+        .footer-right p { margin-bottom: 10px; }
+        .footer-right a { color: var(--white); text-decoration: none; }
+
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; }
+            nav.active { display: flex; }
+            .blog-header h1 { font-size: 2rem; }
+            footer { flex-direction: column; gap: 30px; }
+            .footer-right { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">Columbia Properties</a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../management.html">Property Management</a>
+            <a href="../home-watching.html">Home Watching</a>
+            <a href="../pricing.html">Pricing</a>
+            <a href="../about.html">Who We Are</a>
+            <a href="../blog.html">Blog</a>
+            <a href="tel:6029355543" class="phone-btn">Call or Text 602-935-5543</a>
+        </nav>
+    </header>
+
+    <section class="blog-header">
+        <p class="breadcrumb"><a href="../blog.html">Blog</a> / Monsoon Preparation</p>
+        <h1>Monsoon Season Property Preparation: A Phoenix Landlord's Checklist</h1>
+        <p class="meta">February 3, 2026 • 9 min read</p>
+    </section>
+
+    <article class="blog-content">
+        <p>Arizona's monsoon season, typically running from June through September, brings some of the most dramatic weather events in the country. For Phoenix landlords, these intense storms present a unique set of challenges and risks to rental properties. Understanding how to properly prepare your investment properties can mean the difference between minor inconveniences and costly damage.</p>
+
+        <p>At Columbia Properties, we've helped hundreds of landlords protect their properties during monsoon season. In this comprehensive guide, we'll share the essential preparation steps every Phoenix property owner should take.</p>
+
+        <h2>Understanding Arizona's Monsoon Threat</h2>
+
+        <p>Arizona monsoons are characterized by violent winds, sudden intense rainfall, dust storms (haboobs), and occasional hail. These storms can cause significant damage to structures, landscaping, and utility systems. Average wind speeds can exceed 50 mph, with gusts reaching 70+ mph during severe storms. In just minutes, heavy rainfall can overwhelm drainage systems and cause flash flooding.</p>
+
+        <p>The economic impact is substantial. Insurance claims related to monsoon damage spike dramatically during these months. By taking proactive measures, you can substantially reduce your property's vulnerability and protect both your investment and your tenant's safety.</p>
+
+        <h2>Roof and Gutter Inspection</h2>
+
+        <p>Your roof is your property's first defense against monsoon damage. Before the season begins, have a professional roofer conduct a thorough inspection:</p>
+
+        <ul>
+            <li><strong>Check for loose or missing shingles:</strong> Strong winds can catch and tear roofing material that's already compromised</li>
+            <li><strong>Inspect seals and flashing:</strong> Ensure that seams, chimneys, and vent penetrations are properly sealed</li>
+            <li><strong>Clear gutters and downspouts:</strong> Clean gutters thoroughly to ensure proper water drainage. Clogged gutters cause water to back up and enter walls</li>
+            <li><strong>Inspect gutter fasteners:</strong> Wind can tear gutters away from the house if fasteners are loose or corroded</li>
+            <li><strong>Trim nearby tree branches:</strong> Remove branches hanging over the roof that could fall during high winds</li>
+        </ul>
+
+        <div class="highlight-box">
+            <strong>Pro Tip:</strong> Schedule your roof inspection in April or May, before the heaviest storms arrive. This gives you time to make necessary repairs without rushing.
+        </div>
+
+        <h2>Window and Door Security</h2>
+
+        <p>Windows and doors are vulnerable to wind damage during monsoons. Protect them with these measures:</p>
+
+        <h3>Window Protection</h3>
+        <ul>
+            <li><strong>Install or repair window seals:</strong> Check that caulking around window frames is intact and apply fresh caulk if needed</li>
+            <li><strong>Upgrade to impact-resistant film:</strong> Consider installing security film that helps hold glass together if broken by debris</li>
+            <li><strong>Install storm shutters:</strong> For older properties or high-risk areas, metal storm shutters provide excellent protection</li>
+            <li><strong>Check glass condition:</strong> Replace any cracked or damaged panes before monsoon season</li>
+        </ul>
+
+        <h3>Door Security</h3>
+        <ul>
+            <li><strong>Reinforce door frames:</strong> Ensure door frames are sturdy and properly anchored to the structure</li>
+            <li><strong>Check weatherstripping:</strong> Proper weatherstripping prevents water intrusion around door edges</li>
+            <li><strong>Install door reinforcement:</strong> Metal braces can help doors resist high winds</li>
+            <li><strong>Test and repair locks:</strong> Ensure all locks function properly for security</li>
+        </ul>
+
+        <h2>Exterior Wall and Siding Maintenance</h2>
+
+        <p>Damaged or deteriorated exterior walls allow water to penetrate into your property's interior. Before monsoon season:</p>
+
+        <ul>
+            <li>Inspect exterior caulking around trim and penetrations</li>
+            <li>Look for cracks in stucco or other exterior finishes</li>
+            <li>Repair any damaged areas immediately</li>
+            <li>Ensure all exterior paint is in good condition</li>
+            <li>Check that water is properly directing away from the foundation</li>
+        </ul>
+
+        <h2>Landscaping and Yard Safety</h2>
+
+        <p>Your landscaping can become a hazard during monsoon winds. Take these precautions:</p>
+
+        <ul>
+            <li><strong>Trim trees and branches:</strong> Remove any branches within 10 feet of the roof or hanging over the property</li>
+            <li><strong>Remove dead trees:</strong> Dead trees are particularly dangerous in high winds and should be removed before monsoon season</li>
+            <li><strong>Secure loose objects:</strong> Remove or secure any outdoor furniture, decorations, planters, or other items that could become projectiles</li>
+            <li><strong>Check fence integrity:</strong> Repair any loose or damaged fence sections that could fail in strong winds</li>
+            <li><strong>Inspect outdoor AC units:</strong> Secure air conditioning units and heat pumps to prevent them from tipping over</li>
+        </ul>
+
+        <h2>Interior Preparation</h2>
+
+        <p>While much of monsoon preparation focuses on exterior protection, don't neglect interior readiness:</p>
+
+        <h3>Water Damage Prevention</h3>
+        <ul>
+            <li>Inspect attic for leaks and signs of previous water damage</li>
+            <li>Ensure interior gutters and drains are clear and functioning</li>
+            <li>Consider waterproofing products for basement areas if applicable</li>
+            <li>Document property condition with photos before monsoon season</li>
+        </ul>
+
+        <h3>Tenant Communication</h3>
+        <ul>
+            <li>Provide tenants with emergency contact information</li>
+            <li>Explain where the main water shut-off valve is located</li>
+            <li>Provide instructions for securing windows and doors</li>
+            <li>Share information about emergency supplies and evacuation procedures if needed</li>
+        </ul>
+
+        <h2>HVAC System Maintenance</h2>
+
+        <p>Monsoon dust and debris can damage HVAC systems. Protect yours by:</p>
+
+        <ul>
+            <li>Scheduling professional HVAC maintenance in May</li>
+            <li>Replacing filters frequently during monsoon season (more often than usual)</li>
+            <li>Ensuring the AC unit is properly maintained and secured</li>
+            <li>Installing or upgrading air filters to protect against dust infiltration</li>
+        </ul>
+
+        <h2>Insurance and Documentation</h2>
+
+        <p>Before monsoon season, ensure your property insurance is adequate:</p>
+
+        <ul>
+            <li>Review your homeowners or rental property insurance policy</li>
+            <li>Verify coverage limits for wind, hail, and water damage</li>
+            <li>Consider additional coverage if needed</li>
+            <li>Document property condition with dated photos and video</li>
+            <li>Keep records of all maintenance and repairs performed</li>
+        </ul>
+
+        <div class="highlight-box">
+            <strong>Important:</strong> Insurance covers damage from wind and hail, but typically not from flooding or poor maintenance. Document your preparation efforts and repairs to support any future claims.
+        </div>
+
+        <h2>Emergency Preparedness Plan</h2>
+
+        <p>Despite your best preparation efforts, emergencies can still occur. Have a plan in place:</p>
+
+        <ul>
+            <li>Create an emergency contact list and share with tenants</li>
+            <li>Identify a trusted contractor who can respond to emergency repairs</li>
+            <li>Know how to access your property quickly if needed</li>
+            <li>Have documentation of your property's value for insurance claims</li>
+            <li>Consider hiring emergency response services for after-hours issues</li>
+        </ul>
+
+        <h2>How Columbia Properties Can Help</h2>
+
+        <p>Preparing your property for monsoon season requires expertise and attention to detail. Columbia Properties offers comprehensive property management services including seasonal preparation inspections and emergency response coordination. We ensure your Phoenix rental property is properly protected before and during monsoon season.</p>
+
+        <p>Our team:</p>
+        <ul>
+            <li>Conducts thorough pre-monsoon property inspections</li>
+            <li>Coordinates repairs with trusted local contractors</li>
+            <li>Manages tenant communication during severe weather</li>
+            <li>Provides emergency response 24/7 during monsoon season</li>
+            <li>Documents all damage and assists with insurance claims</li>
+        </ul>
+
+        <div class="cta-box">
+            <h3>Protect Your Phoenix Property This Monsoon Season</h3>
+            <p>Let Columbia Properties prepare your rental property for Arizona's intense storms. Professional preparation prevents costly damage.</p>
+            <a href="../index.html#contact">Schedule Your Pre-Monsoon Inspection</a>
+        </div>
+
+        <p>Monsoon season doesn't have to be a source of stress for Phoenix landlords. With proper preparation and professional support, you can confidently face the season knowing your property is protected. Start your monsoon preparation now, and enjoy peace of mind all summer long.</p>
+
+        <p><em>Disclaimer: This article provides general information and should not be considered professional engineering or legal advice. For specific concerns about your property, consult with a qualified professional.</em></p>
+    </article>
+
+    <footer>
+        <div class="footer-left">
+            <h3>Columbia Properties</h3>
+            <p>ADRE #LC717111000</p>
+            <p><a href="../privacy.html">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>602-935-5543</p>
+            <p><a href="mailto:info@columbia-properties.com">info@columbia-properties.com</a></p>
+            <p>2942 N 24th St #115, Phoenix, AZ 85016</p>
+        </div>
+    </footer>
+</body>
+</html>
