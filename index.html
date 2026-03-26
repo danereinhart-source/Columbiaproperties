@@ -451,25 +451,31 @@
         /* ===== SERVICE AREAS ===== */
         .service-areas {
             padding: 90px 5%;
-            background: var(--off-white);
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.80)),
+                        url('GettyImages-1384896175.jpg') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
         }
         .service-areas .section-sub { margin-bottom: 52px; }
         .areas-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-            max-width: 1100px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .area-card {
-            background: var(--white);
-            border: 1px solid #e5e7eb;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
             border-radius: 8px;
             padding: 30px;
+            backdrop-filter: blur(4px);
+            text-align: left;
         }
         .area-card h4 {
             font-family: 'Playfair Display', serif;
             font-size: 1.3rem; font-weight: 700;
-            color: var(--black); margin-bottom: 18px;
+            color: var(--white); margin-bottom: 18px;
             padding-bottom: 14px;
             border-bottom: 2px solid var(--teal);
             display: inline-block;
@@ -477,15 +483,15 @@
         .area-card ul { list-style: none; }
         .area-card li {
             padding: 8px 0;
-            font-size: 0.97rem; color: var(--text);
+            font-size: 0.97rem; color: rgba(255,255,255,0.80);
             display: flex; align-items: center; gap: 10px;
-            border-bottom: 1px solid #f3f4f6;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
         .area-card li:last-child { border-bottom: none; }
         .area-card li::before {
             content: '';
             width: 6px; height: 6px;
-            background: var(--teal); border-radius: 50%; flex-shrink: 0;
+            background: var(--teal-light); border-radius: 50%; flex-shrink: 0;
         }
 
         /* ===== TESTIMONIALS ===== */
@@ -515,12 +521,14 @@
 
         /* ===== ASSOCIATIONS ===== */
         .associations {
-            padding: 55px 5%;
-            background: var(--black);
+            padding: 60px 5%;
+            background: var(--white);
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
         }
         .assoc-label {
             text-align: center;
-            color: rgba(255,255,255,0.35);
+            color: var(--gray);
             font-size: 0.72rem; font-weight: 700;
             letter-spacing: 3.5px; text-transform: uppercase;
             margin-bottom: 32px;
@@ -532,16 +540,16 @@
             gap: 80px; flex-wrap: wrap;
         }
         .logos-grid img {
-            height: 55px; object-fit: contain;
-            filter: brightness(0) invert(1);
-            opacity: 0.5; transition: opacity 0.2s;
+            height: 70px; object-fit: contain;
+            opacity: 0.75; transition: opacity 0.2s;
         }
-        .logos-grid img:hover { opacity: 0.9; }
+        .logos-grid img:hover { opacity: 1; }
 
         /* ===== FAQ ===== */
         .faq {
             padding: 90px 5%;
-            background: var(--off-white);
+            background: linear-gradient(rgba(248,247,245,0.95), rgba(248,247,245,0.95)),
+                        url('desktop-1024x576.jpg.webp') center/cover no-repeat;
         }
         .faq .section-sub { margin-bottom: 52px; }
         .faq-grid {
@@ -659,7 +667,7 @@
             .btn-primary, .btn-outline { justify-content: center; }
             .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
             .services-grid { grid-template-columns: 1fr; }
-            .areas-grid { grid-template-columns: 1fr; }
+            .areas-grid { grid-template-columns: 1fr 1fr; }
             .testimonials-grid { grid-template-columns: 1fr; }
             .faq-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
@@ -722,8 +730,8 @@
             <div class="stat-label">Boutique Property Manager</div>
         </div>
         <div class="stat-item">
-            <div class="stat-num">18<span>+</span></div>
-            <div class="stat-label">Valley Communities Served</div>
+            <div class="stat-num">100<span>%</span></div>
+            <div class="stat-label">Transparent Fee Structure</div>
         </div>
         <div class="stat-item">
             <div class="stat-num">5<span>★</span></div>
@@ -907,9 +915,9 @@
 
 <!-- SERVICE AREAS -->
 <section class="service-areas">
-    <span class="section-label">Where We Work</span>
-    <h2 class="section-heading">Property Management Across<br>the Greater Phoenix Metro</h2>
-    <p class="section-sub">We serve landlords and investors throughout the Valley — wherever your rental is, we've got it covered.</p>
+    <span class="section-label" style="color:var(--teal-light);">Where We Work</span>
+    <h2 class="section-heading" style="color:var(--white);">Property Management Across<br>the Greater Phoenix Metro</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.60); margin-left:auto; margin-right:auto; margin-bottom:52px;">We serve landlords and investors throughout the Valley — wherever your rental is, we've got it covered.</p>
     <div class="areas-grid">
         <div class="area-card">
             <h4>West Valley</h4>
@@ -942,6 +950,28 @@
                 <li>Gilbert</li>
                 <li>Chandler</li>
                 <li>Queen Creek</li>
+            </ul>
+        </div>
+        <div class="area-card">
+            <h4>Northeast Valley</h4>
+            <ul>
+                <li>Fountain Hills</li>
+                <li>Rio Verde</li>
+                <li>Paradise Valley</li>
+                <li>Gold Canyon</li>
+                <li>Apache Junction</li>
+                <li>San Tan Valley</li>
+            </ul>
+        </div>
+        <div class="area-card">
+            <h4>Far West &amp; Beyond</h4>
+            <ul>
+                <li>Buckeye</li>
+                <li>Litchfield Park</li>
+                <li>Waddell</li>
+                <li>Tonopah</li>
+                <li>Estrella</li>
+                <li>Tolleson</li>
             </ul>
         </div>
     </div>
