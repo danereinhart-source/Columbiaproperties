@@ -880,8 +880,13 @@
             <div class="analysis-form">
                 <h3>Get Your Free Analysis</h3>
                 <p>We'll respond within 1 business day.</p>
-                <form action="https://formspree.io/f/mgolonoe" method="POST">
+                <form action="https://formsubmit.co/info@columbia-properties.com" method="POST">
                     <input type="hidden" name="_subject" value="New Rental Analysis Request — Tucson">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://columbia-properties.com/thank-you.html">
+                    <input type="hidden" name="source" value="tucson">
+                    <input type="text" name="_honey" style="display:none">
                     <div class="form-row">
                         <div class="form-group">
                             <input type="text" name="first_name" placeholder="First Name" required>
@@ -899,9 +904,33 @@
                     <div class="form-group">
                         <input type="text" name="property_address" placeholder="Property Address (optional)">
                     </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select name="units" aria-label="Number of units" style="width:100%;padding:14px 16px;border:1px solid #e5e7eb;border-radius:6px;font-family:inherit;font-size:0.95rem;color:#374151;background:#fff;">
+                                <option value="" disabled selected>Number of Units</option>
+                                <option>1 unit</option>
+                                <option>2–4 units</option>
+                                <option>5+ units</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="current_situation" aria-label="Your situation" style="width:100%;padding:14px 16px;border:1px solid #e5e7eb;border-radius:6px;font-family:inherit;font-size:0.95rem;color:#374151;background:#fff;">
+                                <option value="" disabled selected>Your Situation</option>
+                                <option>Self-managing now</option>
+                                <option>Switching property managers</option>
+                                <option>Property is vacant</option>
+                                <option>Out-of-state owner</option>
+                                <option>Just exploring</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <textarea name="message" placeholder="Tell us about your property or any questions..."></textarea>
                     </div>
+                    <label style="display:flex;gap:10px;align-items:flex-start;margin:4px 0 16px;font-size:0.76rem;color:#6b7280;line-height:1.5;">
+                        <input type="checkbox" name="consent" value="yes" required style="margin-top:3px;flex-shrink:0;width:16px;height:16px;accent-color:#2d9b8a;">
+                        <span>I agree that Columbia Properties may contact me at the number and email provided, including by phone call, text, and automated or AI-assisted calls, about my property. Consent is not a condition of purchase. Message/data rates may apply.</span>
+                    </label>
                     <button type="submit" class="submit-btn">Send My Free Analysis Request</button>
                 </form>
                 <p class="form-note">No obligation. We'll never share your information.</p>
@@ -1094,7 +1123,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <span>© 2025 Columbia Properties · ADRE #LC717111000</span>
+        <span>© 2026 Columbia Properties · ADRE #LC717111000</span>
         <a href="privacy.html">Privacy Policy</a>
     </div>
 </footer>
