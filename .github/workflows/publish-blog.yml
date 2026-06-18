@@ -1,0 +1,67 @@
+name: Publish weekly blog post
+
+# Publishes the next queued blog post once a week and commits it.
+# Schedule: Mondays at 16:00 UTC (= 9:00 AM Phoenix, which is UTC-7 year-round).
+# You can also trigger it manually from the Actions tab (Run workflow).
+
+on:
+  schedule:
+    - cron: "0 16 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Publish next queued post
+        id: publish
+        run: |
+          python3 _blog_engine/publish.py | tee publish_output.txt
+          echo "remaining=$(ls _blog_engine/queue/*.html 2>/dev/null | wc -l | tr -d ' ')" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Publish weekly blog post (automated)"
+            git push
+          else
+            echo "No changes to commit (queue may be empty)."
+          fi
+
+      - name: Open reminder issue if queue is low
+        if: ${{ steps.publish.outputs.remaining != '' && fromJSON(steps.publish.outputs.remaining) <= 2 }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const remaining = `${{ steps.publish.outputs.remaining }}`;
+            const title = "Blog queue running low";
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              labels: "blog-queue",
+            });
+            if (existing.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                labels: ["blog-queue"],
+                body: `The automated blog queue has **${remaining}** post(s) left in \`_blog_engine/queue/\`.\n\nOpen Cowork and ask Claude to "refill the blog queue" to add more posts. Close this issue once the queue is topped up.`,
+              });
+            }

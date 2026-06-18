@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{META_TITLE}}</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <link rel="canonical" href="https://columbia-properties.com/blog/{{SLUG}}.html">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --accent-green: #4a7c59;
+        }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.8; color: var(--dark-gray); }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+        header {
+            background: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--black);
+            text-decoration: none;
+        }
+        nav { display: flex; align-items: center; gap: 30px; }
+        nav a { color: var(--dark-gray); text-decoration: none; font-size: 0.9rem; }
+        nav a:hover { color: var(--black); }
+        .phone-btn {
+            border: 1px solid var(--black);
+            padding: 10px 20px;
+            font-size: 0.85rem;
+        }
+
+        .blog-header {
+            padding: 60px 5%;
+            background: var(--light-gray);
+        }
+        .blog-header .breadcrumb {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        .blog-header .breadcrumb a { color: var(--gray); }
+        .blog-header h1 {
+            font-size: 2.8rem;
+            color: var(--black);
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        .blog-header .meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 5%;
+        }
+        .blog-content p {
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+        .blog-content h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            color: var(--black);
+        }
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--black);
+        }
+        .blog-content ul, .blog-content ol {
+            margin: 20px 0 20px 30px;
+            color: var(--dark-gray);
+        }
+        .blog-content li { margin-bottom: 10px; }
+        .blog-content strong { color: var(--black); }
+        .highlight-box {
+            background: var(--light-gray);
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid var(--dark-gray);
+        }
+
+        .cta-box {
+            background: var(--black);
+            color: var(--white);
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-box h3 { color: var(--white); margin-bottom: 15px; font-size: 1.5rem; }
+        .cta-box p { opacity: 0.9; margin-bottom: 20px; }
+        .cta-box a {
+            display: inline-block;
+            border: 1px solid var(--white);
+            padding: 12px 30px;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .cta-box a:hover { background: var(--white); color: var(--black); }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 50px 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-left h3 { font-size: 1.5rem; margin-bottom: 20px; }
+        .footer-left p { opacity: 0.7; font-size: 0.9rem; margin-bottom: 10px; }
+        .footer-left a { color: var(--accent-green); text-decoration: none; }
+        .footer-right { text-align: right; }
+        .footer-right p { margin-bottom: 10px; }
+        .footer-right a { color: var(--white); text-decoration: none; }
+
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; }
+            nav.active { display: flex; }
+            .blog-header h1 { font-size: 2rem; }
+            footer { flex-direction: column; gap: 30px; }
+            .footer-right { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">Columbia Properties</a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../management.html">Property Management</a>
+            <a href="../home-watching.html">Home Watching</a>
+            <a href="../pricing.html">Pricing</a>
+            <a href="../about.html">Who We Are</a>
+            <a href="../blog.html">Blog</a>
+            <a href="tel:6029355543" class="phone-btn">Call or Text 602-935-5543</a>
+        </nav>
+    </header>
+
+    <section class="blog-header">
+        <p class="breadcrumb"><a href="../blog.html">Blog</a> / {{BREADCRUMB}}</p>
+        <h1>{{TITLE}}</h1>
+        <p class="meta">{{DATE_DISPLAY}} &bull; {{READ_TIME}}</p>
+    </section>
+
+    <article class="blog-content">
+{{BODY}}
+
+        <div class="cta-box">
+            <h3>Get a Free Rental Analysis</h3>
+            <p>Columbia Properties helps Phoenix-area landlords maximize cash flow and minimize the headaches of managing rentals, all for a transparent flat fee.</p>
+            <a href="../index.html#contact">Request Your Free Analysis</a>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-left">
+            <h3>Columbia Properties</h3>
+            <p>ADRE #LC717111000</p>
+            <p><a href="../privacy.html">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>602-935-5543</p>
+            <p><a href="mailto:info@columbia-properties.com">info@columbia-properties.com</a></p>
+            <p>2942 N 24th St #115, Phoenix, AZ 85016</p>
+        </div>
+    </footer>
+</body>
+</html>
