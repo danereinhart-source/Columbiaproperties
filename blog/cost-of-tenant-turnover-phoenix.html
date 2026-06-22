@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Real Cost of Tenant Turnover in Phoenix | Columbia Properties</title>
+    <meta name="description" content="Turnover quietly erodes rental returns. Here is what a vacancy really costs Phoenix landlords and the proven ways to keep good tenants longer.">
+    <link rel="canonical" href="https://columbia-properties.com/blog/cost-of-tenant-turnover-phoenix.html">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --accent-green: #4a7c59;
+        }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.8; color: var(--dark-gray); }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+        header {
+            background: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--black);
+            text-decoration: none;
+        }
+        nav { display: flex; align-items: center; gap: 30px; }
+        nav a { color: var(--dark-gray); text-decoration: none; font-size: 0.9rem; }
+        nav a:hover { color: var(--black); }
+        .phone-btn {
+            border: 1px solid var(--black);
+            padding: 10px 20px;
+            font-size: 0.85rem;
+        }
+
+        .blog-header {
+            padding: 60px 5%;
+            background: var(--light-gray);
+        }
+        .blog-header .breadcrumb {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        .blog-header .breadcrumb a { color: var(--gray); }
+        .blog-header h1 {
+            font-size: 2.8rem;
+            color: var(--black);
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        .blog-header .meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 5%;
+        }
+        .blog-content p {
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+        .blog-content h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            color: var(--black);
+        }
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin: 30px 0 15px;
+            color: var(--black);
+        }
+        .blog-content ul, .blog-content ol {
+            margin: 20px 0 20px 30px;
+            color: var(--dark-gray);
+        }
+        .blog-content li { margin-bottom: 10px; }
+        .blog-content strong { color: var(--black); }
+        .highlight-box {
+            background: var(--light-gray);
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid var(--dark-gray);
+        }
+
+        .cta-box {
+            background: var(--black);
+            color: var(--white);
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-box h3 { color: var(--white); margin-bottom: 15px; font-size: 1.5rem; }
+        .cta-box p { opacity: 0.9; margin-bottom: 20px; }
+        .cta-box a {
+            display: inline-block;
+            border: 1px solid var(--white);
+            padding: 12px 30px;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .cta-box a:hover { background: var(--white); color: var(--black); }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 50px 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-left h3 { font-size: 1.5rem; margin-bottom: 20px; }
+        .footer-left p { opacity: 0.7; font-size: 0.9rem; margin-bottom: 10px; }
+        .footer-left a { color: var(--accent-green); text-decoration: none; }
+        .footer-right { text-align: right; }
+        .footer-right p { margin-bottom: 10px; }
+        .footer-right a { color: var(--white); text-decoration: none; }
+
+        .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; }
+            nav.active { display: flex; }
+            .blog-header h1 { font-size: 2rem; }
+            footer { flex-direction: column; gap: 30px; }
+            .footer-right { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">Columbia Properties</a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../management.html">Property Management</a>
+            <a href="../home-watching.html">Home Watching</a>
+            <a href="../pricing.html">Pricing</a>
+            <a href="../about.html">Who We Are</a>
+            <a href="../blog.html">Blog</a>
+            <a href="tel:6029355543" class="phone-btn">Call or Text 602-935-5543</a>
+        </nav>
+    </header>
+
+    <section class="blog-header">
+        <p class="breadcrumb"><a href="../blog.html">Blog</a> / Tenant Turnover</p>
+        <h1>The True Cost of Tenant Turnover in Phoenix (and How to Reduce It)</h1>
+        <p class="meta">June 22, 2026 &bull; 7 min read</p>
+    </section>
+
+    <article class="blog-content">
+        <p>Ask most Phoenix landlords what hurts their returns the most and they will point to a big repair or a problem tenant. But the quieter, more consistent drain on rental income is turnover: every time a tenant leaves and a unit sits empty, you lose money on multiple fronts at once. Understanding the true cost is the first step to protecting your bottom line.</p>
+
+        <h2>What Turnover Actually Costs</h2>
+
+        <p>The headline number is lost rent during vacancy, but that is only part of it. A realistic accounting includes:</p>
+
+        <ul>
+            <li><strong>Lost rent:</strong> Even two to four weeks of vacancy on a $1,800 unit is roughly $900 to $1,800 gone, and Phoenix turnover often spans longer if it lands in a slow season.</li>
+            <li><strong>Make-ready costs:</strong> Paint, cleaning, carpet, and minor repairs between tenants commonly run several hundred to a couple thousand dollars.</li>
+            <li><strong>Marketing and leasing:</strong> Listing, photography, showings, and screening all take time and money.</li>
+            <li><strong>Utility and holding costs:</strong> While vacant, you cover electricity (critical in Arizona summers to protect the home), water, landscaping, and pool service.</li>
+            <li><strong>Concessions:</strong> In a soft market you may need to offer move-in incentives to fill the unit.</li>
+        </ul>
+
+        <p>Add it up and a single turnover can easily erase one to two months of profit. Multiply that across a portfolio or several years and the cost of preventable turnover dwarfs almost any other operating expense.</p>
+
+        <div class="highlight-box">
+            <strong>The math that matters:</strong> Retaining a good tenant for one extra year at a modest rent increase almost always beats pushing for a larger increase that triggers a move-out, a vacancy, and a full make-ready.
+        </div>
+
+        <h2>Why Tenants Leave</h2>
+
+        <p>Some turnover is unavoidable: tenants buy homes, take jobs in other cities, or have life changes. But a large share of move-outs are preventable and tend to trace back to a few causes:</p>
+
+        <ul>
+            <li>Slow or poor responses to maintenance requests</li>
+            <li>Rent increases that feel arbitrary or out of step with the market</li>
+            <li>Feeling that the landlord is hard to reach or unresponsive</li>
+            <li>Deferred maintenance that makes the home feel neglected</li>
+        </ul>
+
+        <p>Notice that most of these are about service and communication, not price. Tenants will often pay a fair market rent to stay somewhere they feel well cared for.</p>
+
+        <h2>Proven Ways to Reduce Turnover</h2>
+
+        <h3>1. Respond to Maintenance Fast</h3>
+        <p>Responsiveness is the single biggest driver of tenant satisfaction. A tenant whose AC is fixed the same day in July is a tenant who renews. Quick, reliable maintenance is one of the clearest signals that someone is actually managing the property.</p>
+
+        <h3>2. Price Renewals Strategically</h3>
+        <p>Before sending a renewal increase, look at what comparable units are actually leasing for. A modest, well-justified increase that keeps a reliable tenant in place usually beats a steep one that sends them shopping. Frame the renewal as a relationship, not a transaction.</p>
+
+        <h3>3. Communicate Like a Professional</h3>
+        <p>Acknowledge requests promptly, set expectations, and follow up. Tenants who feel heard renew far more often than those who feel ignored, even when the underlying issues are identical.</p>
+
+        <h3>4. Start the Renewal Conversation Early</h3>
+        <p>Reaching out 60 to 90 days before lease end gives you time to negotiate and, if the tenant is leaving, to market the unit before it sits empty. Surprises are the enemy of low vacancy.</p>
+
+        <h3>5. Maintain the Home Proactively</h3>
+        <p>Small, visible improvements between leases and prompt attention to wear and tear signal that the property is cared for. Proactive maintenance also prevents the emergency repairs that frustrate tenants and cost you more.</p>
+
+        <h2>How Professional Management Helps</h2>
+
+        <p>Reducing turnover is largely about consistency: fast maintenance, fair and data-driven pricing, and steady communication, executed the same way every time. That consistency is exactly what a professional manager delivers. At Columbia Properties, we treat retention as a core part of protecting your return, using real-time Phoenix market data to price renewals, a responsive maintenance process to keep tenants happy, and proactive communication to catch problems before they become move-outs.</p>
+
+        <p>The cheapest tenant to place is the good one you already have. Keeping them is one of the highest-return activities in all of rental investing.</p>
+
+        <div class="cta-box">
+            <h3>Get a Free Rental Analysis</h3>
+            <p>Columbia Properties helps Phoenix-area landlords maximize cash flow and minimize the headaches of managing rentals, all for a transparent flat fee.</p>
+            <a href="../index.html#contact">Request Your Free Analysis</a>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-left">
+            <h3>Columbia Properties</h3>
+            <p>ADRE #LC717111000</p>
+            <p><a href="../privacy.html">Privacy Policy</a></p>
+        </div>
+        <div class="footer-right">
+            <p>602-935-5543</p>
+            <p><a href="mailto:info@columbia-properties.com">info@columbia-properties.com</a></p>
+            <p>2942 N 24th St #115, Phoenix, AZ 85016</p>
+        </div>
+    </footer>
+</body>
+</html>

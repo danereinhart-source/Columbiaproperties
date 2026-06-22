@@ -1,2 +1,2 @@
-Published: arizona-eviction-process-guide -> blog/arizona-eviction-process-guide.html
-Queue remaining: 7
+Published: cost-of-tenant-turnover-phoenix -> blog/cost-of-tenant-turnover-phoenix.html
+Queue remaining: 6
