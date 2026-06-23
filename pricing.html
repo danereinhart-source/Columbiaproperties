@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property Management Pricing Phoenix | Columbia Properties</title>
-    <meta name="description" content="Transparent property management pricing with our Price Match Guarantee. We'll match and beat competitors' fees by 1% of revenue. Platinum and Diamond tiers available in Phoenix.">
+    <meta name="description" content="Transparent, flat-fee property management pricing in Phoenix with our Price Match Guarantee. We'll match and beat any competitor's pricing. Discounted rates for multifamily.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -258,11 +258,22 @@
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: minmax(0, 460px);
+            justify-content: center;
             gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
         }
+        .pricing-note {
+            max-width: 560px;
+            margin: 28px auto 0;
+            text-align: center;
+            font-size: 0.98rem;
+            color: var(--gray, #6b7280);
+            line-height: 1.6;
+        }
+        .pricing-note a { color: var(--accent-green, #2d9b8a); font-weight: 600; text-decoration: none; }
+        .pricing-note a:hover { text-decoration: underline; }
 
         .pricing-card {
             background: var(--white);
@@ -562,7 +573,7 @@
     <section class="price-match">
         <div class="price-match-banner">
             <h2>Price Match Guarantee</h2>
-            <p>We will match and beat any competitor's monthly management fee by <strong>1% of revenue</strong>. If you're in an existing contract, we guarantee Columbia Properties offers the best value in Phoenix property management.</p>
+            <p>We'll <strong>match and beat any competitor's pricing</strong>. If you're in an existing contract, we guarantee Columbia Properties offers the best value in Phoenix property management.</p>
         </div>
     </section>
 
@@ -570,12 +581,12 @@
     <section class="pricing-section">
         <h2 class="section-title">Our Pricing Plans</h2>
         <div class="pricing-grid">
-            <!-- Platinum Tier -->
+            <!-- Single-family / 1-4 unit plan -->
             <div class="pricing-card">
-                <img src="download+(1).jpg.webp" alt="Luxury single family home" class="pricing-card-image">
+                <img src="download+(1).jpg.webp" alt="Single family home in Phoenix" class="pricing-card-image">
                 <div class="pricing-card-content">
-                    <span class="tier-name">Platinum</span>
-                    <h3>1-4 Units</h3>
+                    <span class="tier-name">Full-Service Management</span>
+                    <h3>1-4 Unit Properties</h3>
 
                     <div class="fee-item">
                         <p class="fee-label">Monthly Management Fee</p>
@@ -593,31 +604,8 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Diamond Tier -->
-            <div class="pricing-card">
-                <img src="Choosing.jpg.webp" alt="Multi-family property building" class="pricing-card-image">
-                <div class="pricing-card-content">
-                    <span class="tier-name">Diamond</span>
-                    <h3>5+ Units</h3>
-
-                    <div class="fee-item">
-                        <p class="fee-label">Monthly Management Fee</p>
-                        <p class="fee-value">5% of Monthly Rental Income</p>
-                    </div>
-
-                    <div class="fee-item">
-                        <p class="fee-label">Tenant Placement Fee</p>
-                        <p class="fee-value">25% of First Month's Rent</p>
-                    </div>
-
-                    <div class="fee-item">
-                        <p class="fee-label">Lease Renewal Fee</p>
-                        <p class="fee-value">$99</p>
-                    </div>
-                </div>
-            </div>
         </div>
+        <p class="pricing-note">Own a larger or multifamily property? We offer discounted pricing for 5+ unit portfolios. <a href="free-rental-analysis.html">Reach out for a custom quote.</a></p>
     </section>
 
     <!-- What's Included -->
