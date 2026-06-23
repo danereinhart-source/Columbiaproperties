@@ -25,18 +25,17 @@ CARDS_END = "<!-- BLOG_CARDS_END -->"
 # Static pages to include in the sitemap (relative paths, served at root).
 STATIC_PAGES = [
     ("", "1.0"),
-    ("index.html", "1.0"),
-    ("management.html", "0.9"),
-    ("home-watching.html", "0.8"),
-    ("pricing.html", "0.9"),
-    ("free-rental-analysis.html", "0.9"),
-    ("switch.html", "0.8"),
-    ("faq.html", "0.7"),
-    ("about.html", "0.7"),
-    ("blog.html", "0.8"),
-    ("northern-arizona.html", "0.8"),
-    ("tucson.html", "0.8"),
-    ("privacy.html", "0.3"),
+    ("management", "0.9"),
+    ("home-watching", "0.8"),
+    ("pricing", "0.9"),
+    ("free-rental-analysis", "0.9"),
+    ("switch", "0.8"),
+    ("faq", "0.7"),
+    ("about", "0.7"),
+    ("blog", "0.8"),
+    ("northern-arizona", "0.8"),
+    ("tucson", "0.8"),
+    ("privacy", "0.3"),
 ]
 
 
@@ -59,9 +58,9 @@ def card_html(p):
             <img src="{p['image']}" alt="{alt}">
             <div class="blog-card-content">
                 <p class="date">{p['date_display']}</p>
-                <h3><a href="blog/{p['slug']}.html">{title}</a></h3>
+                <h3><a href="blog/{p['slug']}">{title}</a></h3>
                 <p>{excerpt}</p>
-                <a href="blog/{p['slug']}.html" class="read-more">Read More <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></a>
+                <a href="blog/{p['slug']}" class="read-more">Read More <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></a>
             </div>
         </article>"""
 
@@ -85,7 +84,7 @@ def rebuild_sitemap(posts):
         loc = f"{DOMAIN}/{path}" if path else f"{DOMAIN}/"
         urls.append((loc, None, prio))
     for p in posts:
-        loc = f"{DOMAIN}/blog/{p['slug']}.html"
+        loc = f"{DOMAIN}/blog/{p['slug']}"
         urls.append((loc, p.get("date_iso"), "0.6"))
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',

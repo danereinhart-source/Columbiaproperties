@@ -5,105 +5,101 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/index.html</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://columbia-properties.com/management.html</loc>
+    <loc>https://columbia-properties.com/management</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/home-watching.html</loc>
+    <loc>https://columbia-properties.com/home-watching</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/pricing.html</loc>
+    <loc>https://columbia-properties.com/pricing</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/free-rental-analysis.html</loc>
+    <loc>https://columbia-properties.com/free-rental-analysis</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/switch.html</loc>
+    <loc>https://columbia-properties.com/switch</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/faq.html</loc>
+    <loc>https://columbia-properties.com/faq</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/about.html</loc>
+    <loc>https://columbia-properties.com/about</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog.html</loc>
+    <loc>https://columbia-properties.com/blog</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/northern-arizona.html</loc>
+    <loc>https://columbia-properties.com/northern-arizona</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/tucson.html</loc>
+    <loc>https://columbia-properties.com/tucson</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/privacy.html</loc>
+    <loc>https://columbia-properties.com/privacy</loc>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog/cost-of-tenant-turnover-phoenix.html</loc>
+    <loc>https://columbia-properties.com/blog/cost-of-tenant-turnover-phoenix</loc>
     <lastmod>2026-06-22</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog/arizona-eviction-process-guide.html</loc>
+    <loc>https://columbia-properties.com/blog/arizona-eviction-process-guide</loc>
     <lastmod>2026-06-18</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog/arizona-landlord-tenant-act-2026.html</loc>
+    <loc>https://columbia-properties.com/blog/arizona-landlord-tenant-act-2026</loc>
     <lastmod>2026-06-11</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog/phoenix-rental-market-2026.html</loc>
+    <loc>https://columbia-properties.com/blog/phoenix-rental-market-2026</loc>
     <lastmod>2026-06-04</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog/monsoon-season-property-prep.html</loc>
+    <loc>https://columbia-properties.com/blog/monsoon-season-property-prep</loc>
     <lastmod>2026-05-28</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog/tenant-screening-best-practices.html</loc>
+    <loc>https://columbia-properties.com/blog/tenant-screening-best-practices</loc>
     <lastmod>2026-05-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog/maximize-rental-income-phoenix.html</loc>
+    <loc>https://columbia-properties.com/blog/maximize-rental-income-phoenix</loc>
     <lastmod>2026-05-14</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog/hvac-maintenance-arizona.html</loc>
+    <loc>https://columbia-properties.com/blog/hvac-maintenance-arizona</loc>
     <lastmod>2026-05-07</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog/security-deposits-arizona.html</loc>
+    <loc>https://columbia-properties.com/blog/security-deposits-arizona</loc>
     <lastmod>2026-04-30</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog/choose-property-manager-phoenix.html</loc>
+    <loc>https://columbia-properties.com/blog/choose-property-manager-phoenix</loc>
     <lastmod>2026-04-23</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://columbia-properties.com/blog/phoenix-landlord-tax-deductions.html</loc>
+    <loc>https://columbia-properties.com/blog/phoenix-landlord-tax-deductions</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.6</priority>
   </url>
