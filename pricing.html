@@ -258,21 +258,42 @@
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: minmax(0, 460px);
-            justify-content: center;
-            gap: 40px;
-            max-width: 1200px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 36px;
+            max-width: 920px;
             margin: 0 auto;
+            align-items: stretch;
         }
+        .pricing-card { display: flex; flex-direction: column; }
+        .pricing-highlights {
+            background: #fff;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .pricing-highlights h3 { font-size: 1.45rem; margin-bottom: 8px; color: #111; }
+        .pricing-highlights .ph-sub { color: #6b7280; font-size: 0.95rem; margin-bottom: 22px; }
+        .pricing-highlights ul { list-style: none; padding: 0; margin: 0 0 26px; }
+        .pricing-highlights li { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 15px; color: #374151; font-size: 0.96rem; line-height: 1.5; }
+        .pricing-highlights li i { color: #2d9b8a; margin-top: 4px; flex-shrink: 0; }
+        .pricing-highlights .ph-cta {
+            margin-top: auto; display: inline-block; text-align: center;
+            background: #2d9b8a; color: #fff; padding: 14px 22px; border-radius: 6px;
+            text-decoration: none; font-weight: 600; transition: background 0.2s;
+        }
+        .pricing-highlights .ph-cta:hover { background: #1a7a6a; }
         .pricing-note {
-            max-width: 560px;
-            margin: 28px auto 0;
+            max-width: 700px;
+            margin: 30px auto 0;
             text-align: center;
             font-size: 0.98rem;
-            color: var(--gray, #6b7280);
+            color: #6b7280;
             line-height: 1.6;
         }
-        .pricing-note a { color: var(--accent-green, #2d9b8a); font-weight: 600; text-decoration: none; }
+        .pricing-note a { color: #2d9b8a; font-weight: 600; text-decoration: none; }
         .pricing-note a:hover { text-decoration: underline; }
 
         .pricing-card {
@@ -579,7 +600,7 @@
 
     <!-- Pricing Tiers -->
     <section class="pricing-section">
-        <h2 class="section-title">Our Pricing Plans</h2>
+        <h2 class="section-title">Simple, Flat-Fee Pricing</h2>
         <div class="pricing-grid">
             <!-- Single-family / 1-4 unit plan -->
             <div class="pricing-card">
@@ -603,6 +624,19 @@
                         <p class="fee-value">$199</p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Highlights / value panel -->
+            <div class="pricing-highlights">
+                <h3>One Transparent Fee</h3>
+                <p class="ph-sub">No hidden charges, no surprise add-ons, no long-term lock-in. Just full-service management for one clear percentage.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i><span>Everything included: marketing, screening, rent collection, maintenance coordination, and reporting.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Price-match guarantee. We'll match and beat any competitor's pricing.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Discounted pricing for 5+ unit and multifamily portfolios.</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Two licensed Arizona brokers, with same-day communication.</span></li>
+                </ul>
+                <a href="free-rental-analysis.html" class="ph-cta">Get Your Free Rental Analysis</a>
             </div>
         </div>
         <p class="pricing-note">Own a larger or multifamily property? We offer discounted pricing for 5+ unit portfolios. <a href="free-rental-analysis.html">Reach out for a custom quote.</a></p>
