@@ -1,2 +1,2 @@
-Published: cost-of-tenant-turnover-phoenix -> blog/cost-of-tenant-turnover-phoenix.html
-Queue remaining: 6
+Published: service-animals-pet-policies-arizona -> blog/service-animals-pet-policies-arizona.html
+Queue remaining: 5
