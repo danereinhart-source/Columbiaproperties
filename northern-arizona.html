@@ -9,6 +9,15 @@
       gtag('js', new Date());
       gtag('config', 'G-JK47SNPE9B');
     </script>
+    <!-- ===== Paid-ads pixels (paste IDs, then uncomment to activate) ===== -->
+    <!-- Google Ads remarketing + conversions: replace AW-XXXXXXXXX -->
+    <!-- <script>gtag('config','AW-XXXXXXXXX');</script> -->
+    <!-- Meta Pixel: replace YOUR_PIXEL_ID (both spots) -->
+    <!--
+    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');</script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+    -->
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -893,7 +902,7 @@
                     <input type="hidden" name="_subject" value="New Rental Analysis Request — Northern AZ">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://columbia-properties.com/thank-you">
+                    <input type="hidden" name="_next" value="https://columbia-properties.com/thank-you?type=pm">
                     <input type="hidden" name="source" value="northern-arizona">
                     <input type="text" name="_honey" style="display:none">
                     <div class="form-row">
@@ -1144,5 +1153,6 @@
         });
     });
 </script>
+    <script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"]');if(a&&window.gtag){gtag('event','phone_call_click',{transport_type:'beacon'});}});</script>
 </body>
 </html>
