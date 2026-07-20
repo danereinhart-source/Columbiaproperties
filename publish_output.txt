@@ -1,2 +1,3 @@
-Published: out-of-state-owner-arizona-rental-guide -> blog/out-of-state-owner-arizona-rental-guide.html
-Queue remaining: 3
+Published: landlord-renters-insurance-arizona -> blog/landlord-renters-insurance-arizona.html
+Queue remaining: 2
+::warning::Blog queue is running low (2 left). Ask Claude to refill it.
