@@ -1,3 +1,1 @@
-Published: short-term-vs-long-term-rentals-phoenix -> blog/short-term-vs-long-term-rentals-phoenix.html
-Queue remaining: 0
-::warning::Blog queue is running low (0 left). Ask Claude to refill it.
+::notice::Blog queue is EMPTY. Nothing to publish. Ask Claude to refill the queue.
