@@ -1,2 +1,1 @@
-Published: how-to-price-your-phoenix-rental -> blog/how-to-price-your-phoenix-rental.html
-Queue remaining: 4
+::notice::Blog queue is EMPTY. Nothing to publish. Ask Claude to refill the queue.
