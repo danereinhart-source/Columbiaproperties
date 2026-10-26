@@ -1,1 +1,2 @@
-::notice::Blog queue is EMPTY. Nothing to publish. Ask Claude to refill the queue.
+Published: how-to-switch-property-managers-arizona -> blog/how-to-switch-property-managers-arizona.html
+Queue remaining: 11
