@@ -1,2 +1,2 @@
-Published: winter-freeze-prep-phoenix-rentals -> blog/winter-freeze-prep-phoenix-rentals.html
-Queue remaining: 10
+Published: renting-your-phoenix-home-during-holidays -> blog/renting-your-phoenix-home-during-holidays.html
+Queue remaining: 9
